@@ -5,5 +5,5 @@ WORKDIR /app
 COPY . .
 
 RUN --mount=type=secret,id=dotenv-file,dst=.env \
-    sleep 15 \
+    sleep 15; \
     cp .env .env.production
