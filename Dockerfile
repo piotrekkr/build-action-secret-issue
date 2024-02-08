@@ -4,7 +4,6 @@ WORKDIR /app
 
 COPY . .
 
-ARG BUILD_ENV
-
 RUN --mount=type=secret,id=dotenv-file,dst=.env \
-   cp .env .env.production
+    sleep 15 \
+    cp .env .env.production
